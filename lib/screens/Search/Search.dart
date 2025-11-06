@@ -51,7 +51,8 @@ class _SearchState extends State<Search> {
   void searchProduct(String keyword) {
     setState(() {
       search = products
-          .where((element) => element["name"].toLowerCase().contains(keyword))
+          .where((element) =>
+              element["name"].toLowerCase().contains(keyword.toLowerCase()))
           .toList();
     });
   }
@@ -106,7 +107,8 @@ class _SearchState extends State<Search> {
             ),
             Column(
               children: List.generate(search.length, (index) {
-                final product = products[index];
+                // Corrected: Use the 'search' list to get the product
+                final product = search[index];
                 return ListTile(
                   title: Text(
                     product["name"]!,
