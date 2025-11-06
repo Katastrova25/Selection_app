@@ -1,12 +1,9 @@
 import 'package:animation/screens/Animated_Selection/root.dart';
 import 'package:flutter/material.dart';
 
-
 main() {
   runApp(const Animationtask());
 }
-
-
 
 class Animationtask extends StatelessWidget {
   const Animationtask({super.key});
@@ -16,7 +13,7 @@ class Animationtask extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-       primaryColor: Colors.blue,
+        primaryColor: Colors.blue,
       ),
       home: Root(),
     );
